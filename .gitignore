@@ -1,0 +1,16 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+*.egg-info/
+
+# Project-specific
+corpus/pdfs/
+corpus/*.json
+chroma_db/
+*.log
+
+# IDE
+.vscode/
+.idea/
