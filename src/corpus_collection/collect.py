@@ -58,7 +58,7 @@ def collect_papers():
         total_rejected += rejected_in_query
     
     print(f"\n=== Total: {total_kept} kept, {total_rejected} rejected ===")
-    time.sleep(3)
+    time.sleep(5)
     return papers
 
 def main():

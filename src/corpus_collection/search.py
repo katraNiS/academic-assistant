@@ -9,7 +9,7 @@ from . import config
 # Module-level: ένας client για όλο το module
 _client = arxiv.Client(
     page_size=100,
-    delay_seconds=3.0,
+    delay_seconds=5.0,
     num_retries=3,
 )
 
