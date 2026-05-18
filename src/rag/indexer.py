@@ -2,6 +2,9 @@ import json
 from pathlib import Path
 import chromadb
 from chromadb.utils import embedding_functions
+import os
+
+os.environ["TRANSFORMERS_OFFLINE"] = "1"
 
 CHROMA_DIR = Path("chroma_db")
 COLLECTION_NAME = "basketball_papers"
