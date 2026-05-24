@@ -1,0 +1,150 @@
+[
+  {
+    "id": 1,
+    "category": "simple",
+    "query": "What machine learning models are used to predict NBA game outcomes?",
+    "expected_behavior": "in-scope, no decomposition, single search",
+    "in_scope": true,
+    "decomposed": false,
+    "sub_queries": [
+      "\"Machine learning models used in NBA game outcome prediction\""
+    ],
+    "num_chunks_used": 5,
+    "answer": "According to [Document: 2002.08465v1], several machine learning models have been used to predict NBA game outcomes, including:\n\n* Linear regression (achieving an accuracy of 70% on average) [1]\n* Logistic regression (achieving an accuracy of 73%) [1]\n* SVMs (Support Vector Machines) [1]\n* Neural networks [1]\n* Maximum likelihood classifier [14]\n* Multilayer perceptron method [14]\n\nAdditionally, other models have been used in various studies, such as:\n\n* Naive Bayes approach [Miljkovic et al., 2010] \n* Decision trees [teamranking, 2021]\n\nPlease note that this is not an exhaustive list and there may be other machine learning models used for NBA game outcome prediction not mentioned here.",
+    "duration_seconds": 418.2,
+    "error": null
+  },
+  {
+    "id": 2,
+    "category": "simple",
+    "query": "How is player tracking data used in basketball analytics?",
+    "expected_behavior": "in-scope, no decomposition, single search",
+    "in_scope": true,
+    "decomposed": false,
+    "sub_queries": [
+      "\"How is player tracking data used in basketball analytics?\""
+    ],
+    "num_chunks_used": 5,
+    "answer": "Player tracking data in basketball fall into three categories: player tracking, ball tracking, and data from wearable devices [Document: 2007.10550v1]. Most of the basketball literature that pertains to tracking data has made use of optical tracking data from SportVU through Stats, LLC and Second Spectrum, the current data provider for the NBA [Document: 2007.10550v1].\n\nOptical data are derived from raw video footage from multiple cameras in basketball arenas, and typically include timestamped (x, y) locations for all 10 players on the court as well as (x, y, z) locations for the basketball at over 20 frames per second [Document: 2007.10550v1]. Researchers have used data from NOAH and RSPCT, the two largest providers of basketball tracking data, to study several aspects of shooting performance [Document: 2007.10550v1].\n\nMany notable papers from the last decade use tracking data to solve a range of problems, including evaluating defense (Franks et al., 2015b), constructing a “dictionary” of play types (Miller & Bornn, 2017), and constructing deep generative models of spatio-temporal trajectory data (Yu, 2010, Yue et al., 2014, Le et al., 2017) [Document: 2007.10550v1].",
+    "duration_seconds": 276.9,
+    "error": null
+  },
+  {
+    "id": 3,
+    "category": "simple",
+    "query": "What methods are used for shot selection analysis in basketball?",
+    "expected_behavior": "in-scope, no decomposition, single search",
+    "in_scope": true,
+    "decomposed": false,
+    "sub_queries": [
+      "\"Shot selection analysis methods in basketball\""
+    ],
+    "num_chunks_used": 5,
+    "answer": "The provided context does not contain sufficient information to answer this question.",
+    "duration_seconds": 253.8,
+    "error": null
+  },
+  {
+    "id": 4,
+    "category": "simple",
+    "query": "How are neural networks applied to basketball trajectory prediction?",
+    "expected_behavior": "in-scope, no decomposition, single search",
+    "in_scope": true,
+    "decomposed": false,
+    "sub_queries": [
+      "How are neural networks applied in basketball trajectory prediction?"
+    ],
+    "num_chunks_used": 5,
+    "answer": "According to [Document: 1608.03793v2], this paper stands in the vanguard for applying Recurrent Neural Networks (RNNs) to motion tracking data, specifically in the context of basketball trajectories. The results suggest that RNNs have the ability to offer an improved understanding of sequential data. Additionally, the authors mention that future work will likely study other motion tracking tasks, such as play classification or even the individual style of a player.\n\nFurthermore, [Document: 1609.04849v5] mentions that some recent works in the area utilize trajectory data in their basketball game analysis, and specifically cites [10] which uses Conditional Random Fields to predict ball ownership from only player positions using trajectory data, and [11] which predicts the next action of the ball owner via pass, shot, or dribble.\n\n[Document: 1609.04849v5] also mentions that our image-based model performs just as well as a feed-forward technique that required building nearly 200 features, suggesting that neural networks can be applied to basketball trajectory prediction by using image-based models.\n\nTherefore, the answer is that neural networks are applied to basketball trajectory prediction through the use of Recurrent Neural Networks (RNNs) and image-based models.",
+    "duration_seconds": 327.6,
+    "error": null
+  },
+  {
+    "id": 5,
+    "category": "complex",
+    "query": "Compare deep learning approaches for NBA prediction with those for player tracking",
+    "expected_behavior": "in-scope, decomposition into 2 sub-queries",
+    "in_scope": true,
+    "decomposed": true,
+    "sub_queries": [
+      "What are the deep learning approaches used for NBA prediction?",
+      "How do these approaches differ from those used for player tracking in basketball?"
+    ],
+    "num_chunks_used": 10,
+    "answer": "Based on the provided documents, here's a comparison between deep learning approaches for NBA prediction and those for player tracking:\n\n**Similarities:**\n\n* Both areas use spatiotemporal data from tracking systems like SportVu.\n* Many studies utilize machine learning and deep learning techniques to analyze this data.\n* The goal is often to improve predictions or understanding of team and player performance.\n\n**Differences:**\n\n* **Focus:** NBA prediction focuses on predicting game outcomes, shot success, or other high-level metrics. Player tracking, on the other hand, aims to understand individual player behavior, such as movement patterns, shooting tendencies, and decision-making.\n* **Data types:** NBA prediction often involves analyzing aggregate data (e.g., team statistics) and may incorporate external factors like weather or opponent strength. In contrast, player tracking typically deals with more granular, individual-level data (e.g., player movements, shot trajectories).\n* **Model architectures:** While some studies use similar deep learning models for both areas (e.g., convolutional neural networks), others employ domain-specific architectures. For example, the \"BIMOS\" model in [2406.08749v2] is designed specifically for off-ball scoring prediction.\n* **Evaluation metrics:** NBA prediction often uses metrics like accuracy, precision, or F1 score to evaluate model performance. Player tracking studies might focus on metrics related to player behavior, such as movement efficiency or shooting consistency.\n\n**Key findings:**\n\n* Deep learning approaches have been successful in both areas, with some studies achieving high accuracy and providing valuable insights for coaches, teams, and analysts.\n* The use of spatiotemporal data from tracking systems has revolutionized the analysis of basketball performance, enabling more detailed and accurate predictions.\n* Further research is needed to explore the potential of deep learning in player tracking and NBA prediction, particularly in areas like ball movement analysis and shot selection modeling.\n\nKeep in mind that this comparison is based on a limited set of documents and might not be exhaustive.",
+    "duration_seconds": 558.1,
+    "error": null
+  },
+  {
+    "id": 6,
+    "category": "complex",
+    "query": "What are the advantages and limitations of using machine learning in basketball analytics?",
+    "expected_behavior": "in-scope, decomposition into advantages/limitations",
+    "in_scope": true,
+    "decomposed": true,
+    "sub_queries": [
+      "What are the applications of machine learning in basketball analytics?",
+      "What are the limitations of using machine learning in basketball analytics?"
+    ],
+    "num_chunks_used": 10,
+    "answer": "The provided text does not explicitly discuss the advantages and limitations of using machine learning in basketball analytics. However, based on the context, we can infer some points:\n\nAdvantages:\n\n1. **Improved prediction accuracy**: Machine learning models have been shown to achieve high accuracy in predicting game outcomes, with some studies reporting up to 88-94% accuracy.\n2. **Identification of key factors**: Machine learning algorithms can identify the most important features or factors that contribute to a team's performance, allowing for more informed decision-making.\n3. **Handling complex data**: Machine learning models can handle large and complex datasets, including in-game statistics and player performance metrics.\n\nLimitations:\n\n1. **Data quality issues**: The accuracy of machine learning models depends on the quality of the input data. Poor or incomplete data can lead to biased or inaccurate predictions.\n2. **Overfitting**: Machine learning models may overfit to the training data, resulting in poor generalization to new, unseen data.\n3. **Interpretability**: Complex machine learning models can be difficult to interpret, making it challenging to understand why a particular prediction was made.\n4. **Seasonal variability**: As mentioned in the text, some seasons appear to be inherently more difficult to predict, which may limit the effectiveness of machine learning models across different seasons.\n\nIt is essential to note that these points are not explicitly stated in the provided text but can be inferred based on the context and general knowledge of machine learning applications in basketball analytics.",
+    "duration_seconds": 555.9,
+    "error": null
+  },
+  {
+    "id": 7,
+    "category": "complex",
+    "query": "How do traditional statistical methods differ from modern ML approaches in basketball outcome prediction?",
+    "expected_behavior": "in-scope, decomposition into traditional vs modern methods",
+    "in_scope": true,
+    "decomposed": true,
+    "sub_queries": [
+      "How do traditional statistical methods differ from machine learning approaches in basketball outcome prediction?",
+      "What are the key differences between traditional statistical models and modern ML algorithms used in basketball analytics?",
+      "Can you provide examples of how traditional statistics (e.g., PER, WS/40) compare to ML-based predictions (e.g., regression, decision trees)?"
+    ],
+    "num_chunks_used": 15,
+    "answer": "Traditional statistical methods in basketball outcome prediction typically rely on historical box score statistics, such as points scored, rebounds, assists, and other basic metrics. These methods often use simple models like linear regression or decision trees to predict outcomes.\n\nIn contrast, modern machine learning (ML) approaches in basketball outcome prediction incorporate a wide range of features, including:\n\n1. Advanced player statistics: Metrics like true shooting percentage, effective field goal percentage, and defensive box plus/minus provide more nuanced insights into player performance.\n2. Team-level data: Features like team pace, efficiency rating, and possession-based metrics help capture the complexities of team play.\n3. Contextual factors: Incorporating information about weather, travel schedules, injuries, and other external factors can improve predictive accuracy.\n4. Real-time data: Using live game data, such as shot location, player tracking, and other real-time metrics, enables more accurate predictions during games.\n\nModern ML approaches also employ more sophisticated models, including:\n\n1. Neural networks: These models can learn complex patterns in the data and make predictions based on multiple features.\n2. Ensemble methods: Combining the predictions of multiple models can improve overall accuracy and robustness.\n3. Deep learning techniques: Methods like convolutional neural networks (CNNs) and recurrent neural networks (RNNs) are being explored for their potential to analyze large datasets and capture subtle patterns.\n\nThe use of ML in basketball outcome prediction has led to significant improvements in accuracy, with some studies reporting predictions that outperform human experts. However, the field is still evolving, and researchers continue to explore new features, models, and techniques to further improve predictive performance.",
+    "duration_seconds": 692.9,
+    "error": null
+  },
+  {
+    "id": 8,
+    "category": "out_of_scope",
+    "query": "What is the chemical composition of water?",
+    "expected_behavior": "out-of-scope, rejection without retrieval",
+    "in_scope": false,
+    "decomposed": false,
+    "sub_queries": [],
+    "num_chunks_used": 0,
+    "answer": "I cannot answer this question because it is outside the scope of basketball analytics. Please ask a question related to basketball analytics, statistics, or related academic topics.",
+    "duration_seconds": 17.8,
+    "error": null
+  },
+  {
+    "id": 9,
+    "category": "out_of_scope",
+    "query": "How do I cook traditional Italian pasta carbonara?",
+    "expected_behavior": "out-of-scope, rejection without retrieval",
+    "in_scope": false,
+    "decomposed": false,
+    "sub_queries": [],
+    "num_chunks_used": 0,
+    "answer": "I cannot answer this question because it is outside the scope of basketball analytics. Please ask a question related to basketball analytics, statistics, or related academic topics.",
+    "duration_seconds": 16.5,
+    "error": null
+  },
+  {
+    "id": 10,
+    "category": "out_of_scope",
+    "query": "What are the latest developments in quantum computing?",
+    "expected_behavior": "out-of-scope, rejection without retrieval",
+    "in_scope": false,
+    "decomposed": false,
+    "sub_queries": [],
+    "num_chunks_used": 0,
+    "answer": "I cannot answer this question because it is outside the scope of basketball analytics. Please ask a question related to basketball analytics, statistics, or related academic topics.",
+    "duration_seconds": 16.7,
+    "error": null
+  }
+]

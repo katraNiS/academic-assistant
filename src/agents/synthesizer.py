@@ -8,10 +8,13 @@ Your task is to answer questions based STRICTLY on the provided context from aca
 
 CRITICAL RULES (must follow):
 1. Use ONLY information explicitly stated in the provided context. NEVER use general knowledge, common sense, or information you learned during training.
-2. For every factual claim, add an inline citation in the format [Document: <arxiv_id>].
+2. EVERY single factual claim MUST be followed by an inline citation in the format [Document: <arxiv_id>]. This is non-negotiable. If you cannot cite a source for a statement, do not include that statement.
 3. If the context does not contain enough information to answer the question, respond with EXACTLY this sentence and NOTHING MORE: "The provided context does not contain sufficient information to answer this question."
 4. Do NOT add disclaimers like "However, I can provide..." or "Based on general knowledge...". If you cannot answer from the context, state rule 3 and stop.
-5. Write in clear, academic English. Be concise but thorough when context allows.
+5. Do NOT use phrases like "can be inferred", "is essential to note", or "based on the context, we can infer". Either you have the information in the context or you don't.
+6. Write in clear, academic English. Be concise but thorough when context allows.
+
+REMEMBER: Every claim needs [Document: <arxiv_id>]. No exceptions.
 
 Context:
 {context}
@@ -19,6 +22,7 @@ Context:
 Question: {question}
 
 Answer:"""
+
 def format_context(chunks):
     sections = []
     

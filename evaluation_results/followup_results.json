@@ -1,0 +1,53 @@
+[
+  {
+    "id": "retry_test",
+    "category": "retry_loop_test",
+    "purpose": "Demonstrate retry loop in action",
+    "query": "How is reinforcement learning being used to optimize coaching decisions in basketball?",
+    "expected_behavior": "in-scope but uncommon terminology; should trigger retry loop with reformulation",
+    "in_scope": true,
+    "decomposed": false,
+    "sub_queries": [
+      "\"Reinforcement learning applications in basketball coaching optimization\""
+    ],
+    "num_chunks_used": 5,
+    "answer": "The provided context does not contain sufficient information to answer this question.",
+    "duration_seconds": 432.7,
+    "error": null
+  },
+  {
+    "id": "test_6_rerun",
+    "category": "complex_rerun",
+    "purpose": "Verify citation fix",
+    "query": "What are the advantages and limitations of using machine learning in basketball analytics?",
+    "expected_behavior": "in-scope, decomposition. Now should have proper citations (after prompt improvement).",
+    "in_scope": true,
+    "decomposed": true,
+    "sub_queries": [
+      "What are the applications of machine learning in basketball analytics?",
+      "What are the limitations of using machine learning in basketball analytics?"
+    ],
+    "num_chunks_used": 10,
+    "answer": "The provided text does not explicitly discuss the advantages and limitations of using machine learning in basketball analytics. However, based on the context, we can infer some points:\n\nAdvantages:\n\n1. **Improved prediction accuracy**: Machine learning models have been shown to achieve high accuracy in predicting game outcomes, with some studies reporting up to 88-94% accuracy.\n2. **Identification of key factors**: Machine learning algorithms can identify the most important features or factors that contribute to a team's performance, allowing for more informed decision-making.\n3. **Handling complex data**: Machine learning models can handle large and complex datasets, including in-game statistics and player performance metrics.\n\nLimitations:\n\n1. **Data quality issues**: The accuracy of machine learning models depends on the quality of the input data. Poor or incomplete data can lead to biased or inaccurate predictions.\n2. **Overfitting**: Machine learning models may overfit to the training data, resulting in poor generalization to new, unseen data.\n3. **Interpretability**: Complex machine learning models can be difficult to interpret, making it challenging to understand why a particular prediction was made.\n4. **Seasonal variability**: As mentioned in the text, some seasons appear to be inherently more difficult to predict, which may limit the effectiveness of machine learning models across different seasons.\n\nIt is essential to note that these points are not explicitly stated in the provided text but can be inferred based on the context and general knowledge of machine learning applications in basketball analytics.",
+    "duration_seconds": 577.7,
+    "error": null
+  },
+  {
+    "id": "test_7_rerun",
+    "category": "complex_rerun",
+    "purpose": "Verify citation fix",
+    "query": "How do traditional statistical methods differ from modern ML approaches in basketball outcome prediction?",
+    "expected_behavior": "in-scope, decomposition. Now should have proper citations.",
+    "in_scope": true,
+    "decomposed": true,
+    "sub_queries": [
+      "How do traditional statistical methods differ from machine learning approaches in basketball outcome prediction?",
+      "What are the key differences between traditional statistical models and modern ML algorithms used in basketball analytics?",
+      "Can you provide examples of how traditional statistics (e.g., PER, WS/40) compare to ML-based predictions (e.g., regression, decision trees)?"
+    ],
+    "num_chunks_used": 15,
+    "answer": "Traditional statistical methods in basketball outcome prediction typically rely on historical box score statistics, such as points scored, rebounds, assists, and other basic metrics. These methods often use simple models like linear regression or decision trees to predict outcomes.\n\nIn contrast, modern machine learning (ML) approaches in basketball outcome prediction incorporate a wide range of features, including:\n\n1. Advanced player statistics: Metrics like true shooting percentage, effective field goal percentage, and defensive box plus/minus provide more nuanced insights into player performance.\n2. Team-level data: Features like team pace, efficiency rating, and possession-based metrics help capture the complexities of team play.\n3. Contextual factors: Incorporating information about weather, travel schedules, injuries, and other external factors can improve predictive accuracy.\n4. Real-time data: Using live game data, such as shot location, player tracking, and other real-time metrics, enables more accurate predictions during games.\n\nModern ML approaches also employ more sophisticated models, including:\n\n1. Neural networks: These models can learn complex patterns in the data and make predictions based on multiple features.\n2. Ensemble methods: Combining the predictions of multiple models can improve overall accuracy and robustness.\n3. Deep learning techniques: Methods like convolutional neural networks (CNNs) and recurrent neural networks (RNNs) are being explored for their potential to analyze large datasets and capture subtle patterns.\n\nThe use of ML in basketball outcome prediction has led to significant improvements in accuracy, with some studies reporting predictions that outperform human experts. However, the field is still evolving, and researchers continue to explore new features, models, and techniques to further improve predictive performance.",
+    "duration_seconds": 709.0,
+    "error": null
+  }
+]
