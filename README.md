@@ -72,32 +72,6 @@ python evaluation.py
 
 Παίρνει ~50 λεπτά. Αποθηκεύει αποτελέσματα σε `evaluation_results/`.
 
-## Δομή του project
-
-academic-assistant/
-├── corpus/                   # PDFs και metadata (gitignored)
-│   ├── pdfs/
-│   └── metadata.json
-├── chroma_db/                # Vector store (gitignored)
-├── src/
-│   ├── corpus_collection/    # arXiv search & download
-│   │   ├── config.py         # search queries, filters, paths
-│   │   ├── search.py         # API logic
-│   │   └── collect.py        # main collection script
-│   ├── rag/                  # RAG pipeline
-│   │   ├── pdf_parser.py     # PDF text extraction (PyMuPDF)
-│   │   ├── chunker.py        # text chunking (LangChain)
-│   │   └── indexer.py        # ChromaDB build & search
-│   ├── agents/               # 3 agents
-│   │   ├── synthesizer.py    # final answer generation
-│   │   ├── retriever.py      # search + evaluate + retry loop
-│   │   └── analyzer.py       # scope check + decomposition
-│   └── graph.py              # LangGraph orchestration
-├── tests/                    # test scripts ανά module
-├── evaluation_results/       # output του evaluation
-├── evaluation.py             # evaluation runner
-├── requirements.txt
-└── README.md
 
 ## Τεχνικές επιλογές
 
