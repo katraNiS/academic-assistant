@@ -2,6 +2,8 @@
 
 Σύστημα Retrieval-Augmented Generation με 3 agents συνδεδεμένους σε LangGraph workflow. Δέχεται ερωτήσεις σε φυσική γλώσσα και απαντά αξιοποιώντας corpus από 51 ακαδημαϊκά papers του arXiv στο χώρο του basketball analytics. Όλα τρέχουν τοπικά, χωρίς paid APIs.
 
+demo: https://drive.google.com/file/d/1cOE4mn3LstlsmvUbSdXHmVYyVqeR3alK/view?usp=sharing
+
 ## Αρχιτεκτονική
 
 Δύο επίπεδα: RAG pipeline (offline indexing με PyMuPDF + LangChain + ChromaDB) και agentic layer με 3 agents (Query Analyzer, Retriever & Evaluator, Synthesizer) σε LangGraph workflow. Όλοι οι agents χρησιμοποιούν το ίδιο LLM (llama3.1:8b μέσω Ollama) με διαφορετικά system prompts.
